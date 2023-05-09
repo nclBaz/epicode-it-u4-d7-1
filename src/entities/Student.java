@@ -1,5 +1,7 @@
 package entities;
 
+import java.util.Random;
+
 public class Student {
 
 	// Attributi di istanza
@@ -26,6 +28,9 @@ public class Student {
 	public Student(String fn, String ln) { // COSTRUTTORE III
 		this(fn); // Richiamo il II Costruttore
 		setLastName(ln);
+		Random rndm = new Random();
+		Integer i = rndm.nextInt();
+		this.id = i.toString();
 	}
 
 	public Student(String fn, String ln, int a) { // COSTRUTTORE III
